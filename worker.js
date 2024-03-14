@@ -13,7 +13,7 @@ const userQueue = new Queue('userQueue');
 fileQueue.process(async (job) => {
   const { fileId, userId } = job.data;
 
-  // Delete bull keys in redis
+  // Delete bull key in redistrubt
   //   redis-cli keys "bull*" | xargs redis-cli del
 
   if (!userId) {
